@@ -2,11 +2,11 @@
 
 Summary:       Claude's Tab Window Manager
 Name:          ctwm
-Version:       4.0.3
-Release:       2
+Version:       4.1.0
+Release:       1
 BuildRequires: gcc gcc-c++ m4 flex bison
-BuildRequires: libX11-devel libjpeg-devel libXt-devel libXext-devel libXmu-devel libXpm-devel
-BuildRequires: cmake
+BuildRequires: libX11-devel libjpeg-devel libXt-devel libXext-devel libXmu-devel libXpm-devel libXrandr-devel
+BuildRequires: cmake >= 3.6
 Source0:       http://www.ctwm.org/dist/%{name}-%{version}.tar.gz
 Source1:       %{name}.desktop
 License:       MIT
@@ -53,6 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/examples/ctwm/system.ctwmrc
 
 %changelog
+* Mon Apr  3 2023 Quentin Barnes <qbarnes@gmail.com> - 4.1.0-1
+- Add support for ctwm release 4.1.0.
 * Mon Apr  3 2023 Quentin Barnes <qbarnes@gmail.com> - 4.0.3-2
 - Add GCC BuildRequires: rules with Fedora dropping them from mock.
 * Tue Dec 24 2019 Wei-Lun Chao <bluebat@member.fsf.org> - 4.0.3
